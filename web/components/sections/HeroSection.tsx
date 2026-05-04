@@ -12,7 +12,6 @@ type OrbitCard = {
   angle: number;
   radius: string;
   duration: number;
-  delay: number;
 };
 
 type OrbitStyle = CSSProperties & {
@@ -21,11 +20,11 @@ type OrbitStyle = CSSProperties & {
 };
 
 const orbitCards: OrbitCard[] = [
-  { src: "/cards/AS.svg", angle: 10, radius: "8.75rem", duration: 18, delay: 0 },
-  { src: "/cards/KS.svg", angle: 82, radius: "9.5rem", duration: 22, delay: -3 },
-  { src: "/cards/QS.svg", angle: 154, radius: "8.9rem", duration: 20, delay: -7 },
-  { src: "/cards/JS.svg", angle: 226, radius: "9.6rem", duration: 24, delay: -2 },
-  { src: "/cards/10S.svg", angle: 298, radius: "8.6rem", duration: 19, delay: -9 },
+  { src: "/cards/AS.svg", angle: -90, radius: "10.8rem", duration: 24 },
+  { src: "/cards/KS.svg", angle: -18, radius: "10.8rem", duration: 24 },
+  { src: "/cards/QS.svg", angle: 54, radius: "10.8rem", duration: 24 },
+  { src: "/cards/JS.svg", angle: 126, radius: "10.8rem", duration: 24 },
+  { src: "/cards/10S.svg", angle: 198, radius: "10.8rem", duration: 24 },
 ];
 
 export function HeroSection() {
@@ -99,23 +98,22 @@ export function HeroSection() {
               "--angle": `${card.angle}deg`,
               "--radius": card.radius,
               animationDuration: `${card.duration}s`,
-              animationDelay: `${card.delay}s`,
             };
 
             return (
-              <div key={card.src} className="orbit-card" style={style} aria-hidden>
+              <div key={card.src} className="orbit-card z-20" style={style} aria-hidden>
                 <Image
                   src={card.src}
                   alt=""
                   width={88}
                   height={126}
-                  className="h-auto w-12 rounded-md border border-white/10 bg-white shadow-[0_12px_35px_-16px_rgba(0,0,0,0.9)] sm:w-14 lg:w-16"
+                  className="h-auto w-12 rounded-md border border-white/15 bg-white shadow-[0_14px_38px_-18px_rgba(0,0,0,0.95)] sm:w-14 lg:w-[3.9rem]"
                 />
               </div>
             );
           })}
 
-          <div className="absolute left-1/2 top-1/2 h-[72%] w-[72%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full border border-[var(--gold)]/30 bg-black/20 p-2 shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_28px_80px_-36px_rgba(0,0,0,0.9)]">
+          <div className="absolute left-1/2 top-1/2 z-10 h-[64%] w-[64%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full border border-[var(--gold)]/30 bg-black/20 p-2 shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_28px_80px_-36px_rgba(0,0,0,0.9)]">
             <div className="relative h-full w-full overflow-hidden rounded-full">
               <Image
                 src="/ali.jpg"
