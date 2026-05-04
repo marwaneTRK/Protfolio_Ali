@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050508;
+  --surface: #0c0d12;
+  --foreground: #f3f0e8;
+  --muted: #9c968b;
+  --gold: #c9a45c;
+  --gold-bright: #e0c278;
+  --gold-glow: rgba(201, 164, 92, 0.35);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+  --font-serif: var(--font-serif), Georgia, serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+}
+
+.glass {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.02) 45%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 80px -48px rgba(0, 0, 0, 0.85);
+}
+
+@keyframes orbit {
+  from {
+    transform: translate(-50%, -50%) rotate(var(--angle)) translateX(var(--radius))
+      rotate(calc(-1 * var(--angle)));
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(calc(var(--angle) + 360deg))
+      translateX(var(--radius)) rotate(calc(-1 * (var(--angle) + 360deg)));
+  }
+}
+
+.orbit-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  will-change: transform;
+  transform: translate(-50%, -50%) rotate(var(--angle)) translateX(var(--radius))
+    rotate(calc(-1 * var(--angle)));
+  animation: orbit 32s linear infinite;
+}
+
+::selection {
+  background: rgba(201, 164, 92, 0.28);
+  color: var(--foreground);
+}
