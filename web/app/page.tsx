@@ -5,6 +5,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { MediaCredibilitySection } from "@/components/sections/MediaCredibilitySection";
 import { PerformanceSection } from "@/components/sections/PerformanceSection";
 import { SocialSection } from "@/components/sections/SocialSection";
+import { TrustedSection } from "@/components/sections/TrustedSection";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
@@ -13,6 +14,7 @@ export default function Home() {
     <>
       <SiteHeader />
       <HeroSection />
+      <TrustedSection />
       <AboutSection />
       <PerformanceSection />
       <CreationsSection />

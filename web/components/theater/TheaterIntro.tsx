@@ -12,8 +12,6 @@ import {
 import { CurtainTextureSvg } from "./CurtainTextureSvg";
 
 import "./theater-intro.css";
-
-const SESSION_KEY = "ali-theater-curtain-revealed";
 const DUST_COUNT = 42;
 
 function dustVars(i: number): CSSProperties {
@@ -63,8 +61,6 @@ export function TheaterIntro({ children }: { children: ReactNode }) {
     if (!scene || !curtain || !left || !right || !dim) return undefined;
 
     const prefFast = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const alreadyOpen =
-      typeof sessionStorage !== "undefined" && sessionStorage.getItem(SESSION_KEY) === "1";
 
     function applyRevealEndState() {
       gsap.killTweensOf([left, right, curtain, dim]);
@@ -103,7 +99,7 @@ export function TheaterIntro({ children }: { children: ReactNode }) {
         dim,
         {
           opacity: 0,
-          duration: 1.7,
+          duration: 1.8,
           ease: "sine.out",
         },
         0,
@@ -114,7 +110,7 @@ export function TheaterIntro({ children }: { children: ReactNode }) {
         {
           xPercent: -108,
           rotation: -2.4,
-          duration: 2.2,
+          duration: 2.05,
           ease: "power2.inOut",
           force3D: true,
         },
@@ -126,7 +122,7 @@ export function TheaterIntro({ children }: { children: ReactNode }) {
         {
           xPercent: 108,
           rotation: 2.4,
-          duration: 2.2,
+          duration: 2.05,
           ease: "power2.inOut",
           force3D: true,
         },
@@ -139,19 +135,12 @@ export function TheaterIntro({ children }: { children: ReactNode }) {
     }
 
     if (prefFast.matches) {
-      sessionStorage.setItem(SESSION_KEY, "1");
-      applyRevealEndState();
-      return undefined;
-    }
-
-    if (alreadyOpen) {
       applyRevealEndState();
       return undefined;
     }
 
     timelineRef.current = buildTimeline();
     const starter = gsap.delayedCall(0.08, () => {
-      sessionStorage.setItem(SESSION_KEY, "1");
       timelineRef.current?.play(0);
     });
 
