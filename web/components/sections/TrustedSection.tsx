@@ -76,14 +76,14 @@ export function TrustedSection() {
                   className="group relative flex h-24 items-center justify-center px-2"
                   aria-label={logo.name}
                 >
-                  <span className="pointer-events-none absolute inset-x-2 top-1/2 h-8 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(217,217,217,0.16)_0%,rgba(139,92,246,0.14)_45%,transparent_72%)] opacity-0 blur-xl transition-opacity duration-500 ease-out group-hover:opacity-100" />
+                  <span className="pointer-events-none absolute inset-x-2 top-1/2 h-8 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(217,217,217,0.16)_0%,rgba(201,169,98,0.16)_45%,transparent_72%)] opacity-0 blur-xl transition-opacity duration-500 ease-out group-hover:opacity-100" />
                   <span className="relative inline-flex h-16 w-full max-w-[9.5rem] overflow-hidden">
                     <Image
                       src={logo.src}
                       alt={logo.name}
                       fill
                       sizes="(max-width: 640px) 44vw, (max-width: 1024px) 28vw, 160px"
-                      className="object-contain opacity-85 grayscale-[0.1] drop-shadow-[0_6px_14px_rgba(9,9,9,0.55)] transition-all duration-500 ease-out group-hover:-translate-y-0.5 group-hover:scale-105 group-hover:opacity-100 group-hover:drop-shadow-[0_10px_28px_rgba(139,92,246,0.35)]"
+                      className="object-contain opacity-85 grayscale-[0.1] drop-shadow-[0_6px_14px_rgba(9,9,9,0.55)] transition-all duration-500 ease-out group-hover:-translate-y-0.5 group-hover:scale-105 group-hover:opacity-100 group-hover:drop-shadow-[0_10px_28px_rgba(201,169,98,0.32)]"
                     />
                   </span>
                   <span className="pointer-events-none absolute right-2 top-6 h-1.5 w-1.5 rounded-full bg-[#d9d9d9]/80 opacity-0 blur-[0.5px] transition-all duration-500 ease-out group-hover:translate-y-[-2px] group-hover:opacity-100" />

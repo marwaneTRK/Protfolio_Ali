@@ -26,7 +26,8 @@ export function CurtainTextureSvg({ side }: { side: "left" | "right" }) {
           <stop offset="0%" stopColor="#1a0b2e" />
           <stop offset="18%" stopColor="#3b1d63" />
           <stop offset="34%" stopColor="#2b1248" />
-          <stop offset="50%" stopColor="#8b5cf6" />
+          <stop offset="50%" stopColor="#6f42c1" />
+          <stop offset="60%" stopColor="#c9a962" />
           <stop offset="64%" stopColor="#24123d" />
           <stop offset="80%" stopColor="#3b1d63" />
           <stop offset="100%" stopColor="#12081f" />
@@ -35,7 +36,8 @@ export function CurtainTextureSvg({ side }: { side: "left" | "right" }) {
           <stop offset="0%" stopColor="#1a0b2e" />
           <stop offset="18%" stopColor="#3b1d63" />
           <stop offset="34%" stopColor="#2b1248" />
-          <stop offset="50%" stopColor="#8b5cf6" />
+          <stop offset="50%" stopColor="#6f42c1" />
+          <stop offset="60%" stopColor="#c9a962" />
           <stop offset="64%" stopColor="#24123d" />
           <stop offset="80%" stopColor="#3b1d63" />
           <stop offset="100%" stopColor="#12081f" />

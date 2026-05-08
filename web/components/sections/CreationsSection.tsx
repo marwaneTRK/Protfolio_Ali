@@ -41,7 +41,7 @@ export function CreationsSection() {
           <ul className="mt-16 grid gap-8 lg:grid-cols-3">
             {creations.map((item) => (
               <motion.li key={item.slug} variants={fadeUp}>
-                <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.08] bg-gradient-to-b from-white/[0.06] to-transparent p-1 shadow-[0_28px_100px_-48px_rgba(0,0,0,0.85)] transition duration-500 hover:border-[var(--accent)]/35 hover:shadow-[0_36px_120px_-40px_rgba(139,92,246,0.38)]">
+                <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.08] bg-gradient-to-b from-white/[0.06] to-transparent p-1 shadow-[0_28px_100px_-48px_rgba(0,0,0,0.85)] transition duration-500 hover:border-[var(--accent)]/35 hover:shadow-[0_36px_120px_-40px_rgba(201,169,98,0.28)]">
                   <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-black/40">
                     <Image
                       src={item.image}

@@ -14,7 +14,7 @@
   inset: 0;
   z-index: 0;
   background:
-    radial-gradient(ellipse at 50% 25%, rgba(217, 217, 217, 0.12) 0%, rgba(139, 92, 246, 0.15) 34%, transparent 66%),
+    radial-gradient(ellipse at 50% 25%, rgba(217, 217, 217, 0.12) 0%, rgba(111, 66, 193, 0.16) 34%, transparent 66%),
     linear-gradient(180deg, #090909 0%, #050505 42%, #040404 100%);
 }
 
@@ -31,7 +31,7 @@
   background: radial-gradient(
     ellipse 55% 50% at 50% 38%,
     rgba(217, 217, 217, 0.16) 0%,
-    rgba(139, 92, 246, 0.1) 30%,
+    rgba(111, 66, 193, 0.11) 30%,
     transparent 62%
   );
   mix-blend-mode: screen;
@@ -67,9 +67,9 @@
   inset: 0;
   background: linear-gradient(
     165deg,
-    rgba(59, 29, 99, 0.3) 0%,
+    rgba(53, 27, 92, 0.32) 0%,
     transparent 45%,
-    rgba(139, 92, 246, 0.24) 100%
+    rgba(201, 169, 98, 0.18) 100%
   );
   mix-blend-mode: multiply;
   pointer-events: none;
@@ -152,7 +152,20 @@
   position: relative;
   width: calc(100% + 6px);
   height: 100%;
-  overflow: visible;
+  overflow: hidden;
+}
+
+.theater-intro__panel-shell {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-origin: top center;
+}
+
+.theater-intro__fabric {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
 }
 
 .theater-intro__panel svg {
@@ -161,6 +174,92 @@
   width: 100%;
   height: 100%;
   display: block;
+}
+
+.theater-intro__folds {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  padding-inline: 2.5%;
+  pointer-events: none;
+}
+
+.theater-intro__fold {
+  width: 15.5%;
+  height: 100%;
+  border-radius: 0 0 48px 48px;
+  opacity: 0.95;
+  filter: blur(0.2px);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.26) 0%,
+    rgba(217, 217, 217, 0.07) 40%,
+    rgba(0, 0, 0, 0.34) 100%
+  );
+  mix-blend-mode: multiply;
+  transform-origin: center center;
+}
+
+.theater-intro__panel--left .theater-intro__fold:nth-child(odd) {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.29) 0%,
+    rgba(217, 217, 217, 0.08) 46%,
+    rgba(0, 0, 0, 0.36) 100%
+  );
+}
+
+.theater-intro__panel--right .theater-intro__fold:nth-child(odd) {
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0.28) 0%,
+    rgba(217, 217, 217, 0.07) 44%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+}
+
+.theater-intro__panel--left .theater-intro__fold:nth-child(3n) {
+  opacity: 0.84;
+  transform: scaleX(0.93);
+}
+
+.theater-intro__panel--right .theater-intro__fold:nth-child(3n) {
+  opacity: 0.82;
+  transform: scaleX(0.92);
+}
+
+.theater-intro__fabric-shadow,
+.theater-intro__fabric-light {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.theater-intro__fabric-shadow {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.18) 0%,
+    rgba(0, 0, 0, 0.05) 18%,
+    rgba(0, 0, 0, 0.36) 80%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  mix-blend-mode: multiply;
+  opacity: 0.66;
+}
+
+.theater-intro__fabric-light {
+  background: radial-gradient(
+    ellipse 58% 40% at 50% 22%,
+    rgba(217, 217, 217, 0.32) 0%,
+    rgba(217, 217, 217, 0.06) 54%,
+    transparent 86%
+  );
+  mix-blend-mode: screen;
+  opacity: 0.2;
 }
 
 .theater-intro__panel--left {

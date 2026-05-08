@@ -53,7 +53,7 @@ export function MediaCredibilitySection() {
               {mediaTimeline.map((entry) => (
                 <li key={`${entry.year}-${entry.title}`} className="relative pb-12 last:pb-0">
                   <span
-                    className="absolute -left-[calc(0.5rem+1px)] top-1.5 h-3 w-3 -translate-x-1/2 rounded-full bg-[var(--accent)] shadow-[0_0_24px_rgba(139,92,246,0.38)]"
+                    className="absolute -left-[calc(0.5rem+1px)] top-1.5 h-3 w-3 -translate-x-1/2 rounded-full bg-[var(--accent)] shadow-[0_0_24px_rgba(201,169,98,0.34)]"
                     aria-hidden
                   />
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--accent)]">
