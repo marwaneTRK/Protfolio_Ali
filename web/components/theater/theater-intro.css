@@ -1,0 +1,174 @@
+/**
+ * Luxury theater curtain — structure: #scene, #curtain, .left/.right panels.
+ * Curtain motion driven by GSAP; only ambient particle drift uses lightweight CSS.
+ */
+
+#scene.theater-intro__scene {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.theater-intro__backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse at 50% 25%, rgba(255, 233, 185, 0.11) 0%, rgba(201, 164, 92, 0.05) 30%, transparent 62%),
+    linear-gradient(180deg, #13070f 0%, #0f050b 38%, #080308 100%);
+}
+
+.theater-intro__ambient {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.theater-intro__spotlight {
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(
+    ellipse 55% 50% at 50% 38%,
+    rgba(255, 237, 200, 0.14) 0%,
+    rgba(201, 164, 92, 0.06) 28%,
+    transparent 62%
+  );
+  mix-blend-mode: screen;
+  animation: theater-spot-drift 16s ease-in-out infinite alternate;
+}
+
+@keyframes theater-spot-drift {
+  from {
+    opacity: 0.82;
+    transform: scale(1) translate(-1%, -0.5%);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.06) translate(1%, 0.8%);
+  }
+}
+
+.theater-intro__vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      ellipse 85% 70% at 50% 45%,
+      transparent 42%,
+      rgba(5, 3, 6, 0.55) 100%
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, transparent 32%, transparent 68%, rgba(0, 0, 0, 0.75) 100%);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.theater-intro__velvet-wash {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    165deg,
+    rgba(92, 8, 18, 0.18) 0%,
+    transparent 45%,
+    rgba(42, 3, 8, 0.35) 100%
+  );
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.theater-intro__gold-rim {
+  position: absolute;
+  inset: 0;
+  box-shadow:
+    inset 0 0 120px rgba(201, 164, 92, 0.08),
+    inset 0 0 280px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.theater-intro__dim {
+  position: absolute;
+  inset: 0;
+  background: #050508;
+  opacity: 0.52;
+  z-index: 2;
+  pointer-events: none;
+  will-change: opacity;
+}
+
+.theater-intro__particles {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.theater-intro__dust {
+  position: absolute;
+  width: var(--dust-size, 2px);
+  height: var(--dust-size, 2px);
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 250, 230, 0.95), rgba(201, 164, 92, 0.25) 60%, transparent 100%);
+  opacity: var(--dust-op, 0.35);
+  filter: blur(0.35px);
+  animation: theater-dust-float linear infinite;
+  animation-duration: var(--dust-dur, 18s);
+  animation-delay: var(--dust-delay, 0s);
+  will-change: transform, opacity;
+}
+
+@keyframes theater-dust-float {
+  0% {
+    transform: translate3d(0, 110vh, 0) scale(0.6);
+    opacity: 0;
+  }
+  8% {
+    opacity: var(--dust-op, 0.35);
+  }
+  92% {
+    opacity: var(--dust-op-end, 0.2);
+  }
+  100% {
+    transform: translate3d(var(--dust-dx, 8vw), -12vh, 0) scale(1.1);
+    opacity: 0;
+  }
+}
+
+.theater-intro__content {
+  position: relative;
+  z-index: 4;
+}
+
+#curtain.theater-intro__curtain {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.theater-intro__panel {
+  position: relative;
+  width: calc(100% + 6px);
+  height: 100%;
+  overflow: visible;
+}
+
+.theater-intro__panel svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.theater-intro__panel--left {
+  margin-left: -3px;
+  transform-origin: 100% 50%;
+}
+
+.theater-intro__panel--right {
+  margin-left: -3px;
+  transform-origin: 0 50%;
+}

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { CSSProperties } from "react";
 import { motion } from "framer-motion";
+import { TheaterIntro } from "@/components/theater/TheaterIntro";
 import { fadeUp } from "@/lib/motion";
 import { brand } from "@/lib/site";
 
@@ -29,7 +30,8 @@ const orbitCards: OrbitCard[] = [
 
 export function HeroSection() {
   return (
-    <section id="top" className="border-b border-white/[0.06] pt-28 sm:pt-32">
+    <TheaterIntro>
+    <section id="top" className="relative z-[1] border-b border-white/[0.06] pt-28 sm:pt-32">
       <div className="mx-auto grid min-h-[calc(100dvh-7.5rem)] w-full max-w-6xl items-center gap-14 px-5 pb-16 sm:px-8 sm:pb-20 lg:grid-cols-[1fr_auto] lg:gap-20">
         <div>
         <motion.p
@@ -128,5 +130,6 @@ export function HeroSection() {
         </div>
       </div>
     </section>
+    </TheaterIntro>
   );
 }
