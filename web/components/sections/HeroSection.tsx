@@ -35,7 +35,7 @@ export function HeroSection() {
       <div className="mx-auto grid min-h-[calc(100dvh-7.5rem)] w-full max-w-6xl items-center gap-14 px-5 pb-16 sm:px-8 sm:pb-20 lg:grid-cols-[1fr_auto] lg:gap-20">
         <div>
         <motion.p
-          className="text-xs font-semibold uppercase tracking-[0.4em] text-[var(--gold)]"
+          className="text-xs font-semibold uppercase tracking-[0.4em] text-[var(--accent)]"
           variants={fadeUp}
           initial="hidden"
           animate="show"
@@ -80,13 +80,13 @@ export function HeroSection() {
         >
             <Link
             href="#contact"
-            className="inline-flex h-12 items-center justify-center rounded-full bg-[var(--gold)] px-8 text-sm font-semibold tracking-wide text-black transition hover:bg-[var(--gold-bright)]"
+            className="inline-flex h-12 items-center justify-center rounded-full bg-[var(--accent)] px-8 text-sm font-semibold tracking-wide text-white transition hover:bg-[var(--accent-hover)] hover:text-black"
           >
             Book a Show
           </Link>
             <Link
             href="#experience"
-            className="inline-flex h-12 items-center justify-center rounded-full border border-white/20 bg-white/[0.03] px-8 text-sm font-medium tracking-wide text-white transition hover:border-[var(--gold)]/45 hover:bg-white/[0.08]"
+            className="inline-flex h-12 items-center justify-center rounded-full border border-white/20 bg-white/[0.03] px-8 text-sm font-medium tracking-wide text-white transition hover:border-[var(--accent)]/45 hover:bg-white/[0.08]"
           >
             Explore My Work
           </Link>
@@ -115,7 +115,7 @@ export function HeroSection() {
             );
           })}
 
-          <div className="absolute left-1/2 top-1/2 z-10 h-[64%] w-[64%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full border border-[var(--gold)]/30 bg-black/20 p-2 shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_28px_80px_-36px_rgba(0,0,0,0.9)]">
+          <div className="absolute left-1/2 top-1/2 z-10 h-[64%] w-[64%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full border border-[var(--accent)]/30 bg-black/20 p-2 shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_28px_80px_-36px_rgba(0,0,0,0.9)]">
             <div className="relative h-full w-full overflow-hidden rounded-full">
               <Image
                 src="/ali.jpg"

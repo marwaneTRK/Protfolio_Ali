@@ -163,7 +163,7 @@ export function TheaterIntro({ children }: { children: ReactNode }) {
           <div className="theater-intro__spotlight" />
           <div className="theater-intro__vignette" />
           <div className="theater-intro__velvet-wash" />
-          <div className="theater-intro__gold-rim" />
+          <div className="theater-intro__accent-rim" />
         </div>
         <div ref={dimRef} className="theater-intro__dim" aria-hidden />
       </div>

@@ -11,7 +11,7 @@ export function CurtainTextureSvg({ side }: { side: "left" | "right" }) {
 
   const velvetId = side === "left" ? `velvet_l_${u}` : `velvet_r_${u}`;
   const foldId = side === "left" ? `fold_left_${u}` : `fold_right_${u}`;
-  const goldId = side === "left" ? `gold_inner_l_${u}` : `gold_inner_r_${u}`;
+  const accentLightId = side === "left" ? `accent_light_l_${u}` : `accent_light_r_${u}`;
 
   return (
     <svg
@@ -23,28 +23,28 @@ export function CurtainTextureSvg({ side }: { side: "left" | "right" }) {
     >
       <defs>
         <linearGradient id={`velvet_l_${u}`} x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#220202" />
-          <stop offset="18%" stopColor="#4a0404" />
-          <stop offset="34%" stopColor="#360303" />
-          <stop offset="50%" stopColor="#6e0b14" />
-          <stop offset="64%" stopColor="#310303" />
-          <stop offset="80%" stopColor="#4a0404" />
-          <stop offset="100%" stopColor="#190101" />
+          <stop offset="0%" stopColor="#1a0b2e" />
+          <stop offset="18%" stopColor="#3b1d63" />
+          <stop offset="34%" stopColor="#2b1248" />
+          <stop offset="50%" stopColor="#8b5cf6" />
+          <stop offset="64%" stopColor="#24123d" />
+          <stop offset="80%" stopColor="#3b1d63" />
+          <stop offset="100%" stopColor="#12081f" />
         </linearGradient>
         <linearGradient id={`velvet_r_${u}`} x1="100%" y1="0%" x2="0%" y2="0%">
-          <stop offset="0%" stopColor="#220202" />
-          <stop offset="18%" stopColor="#4a0404" />
-          <stop offset="34%" stopColor="#360303" />
-          <stop offset="50%" stopColor="#6e0b14" />
-          <stop offset="64%" stopColor="#310303" />
-          <stop offset="80%" stopColor="#4a0404" />
-          <stop offset="100%" stopColor="#190101" />
+          <stop offset="0%" stopColor="#1a0b2e" />
+          <stop offset="18%" stopColor="#3b1d63" />
+          <stop offset="34%" stopColor="#2b1248" />
+          <stop offset="50%" stopColor="#8b5cf6" />
+          <stop offset="64%" stopColor="#24123d" />
+          <stop offset="80%" stopColor="#3b1d63" />
+          <stop offset="100%" stopColor="#12081f" />
         </linearGradient>
-        <linearGradient id={`gold_inner_l_${u}`} x1="100%" x2="62%">
+        <linearGradient id={`accent_light_l_${u}`} x1="100%" x2="62%">
           <stop offset="0%" stopColor="rgba(217,217,217,0.45)" />
           <stop offset="100%" stopColor="transparent" />
         </linearGradient>
-        <linearGradient id={`gold_inner_r_${u}`} x1="0%" x2="38%">
+        <linearGradient id={`accent_light_r_${u}`} x1="0%" x2="38%">
           <stop offset="0%" stopColor="rgba(217,217,217,0.45)" />
           <stop offset="100%" stopColor="transparent" />
         </linearGradient>
@@ -64,7 +64,7 @@ export function CurtainTextureSvg({ side }: { side: "left" | "right" }) {
       <rect width="200" height="960" fill={`url(#${velvetId})`} />
       <rect width="200" height="960" fill={`url(#${foldId})`} opacity={0.9} />
       <rect width="200" height="960" fill="rgba(217,217,217,0.09)" opacity={0.35} style={{ mixBlendMode: "soft-light" }} />
-      <rect width="200" height="960" fill={`url(#${goldId})`} />
+      <rect width="200" height="960" fill={`url(#${accentLightId})`} />
     </svg>
   );
 }

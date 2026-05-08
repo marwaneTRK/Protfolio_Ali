@@ -32,7 +32,7 @@ export function PerformanceSection() {
           viewport={{ once: true, margin: "-80px" }}
         >
           <motion.div variants={fadeUp} className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--gold)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--accent)]">
               Performance
             </p>
             <h2 className="mt-4 font-display text-4xl font-light tracking-tight text-white sm:text-5xl">
@@ -73,7 +73,7 @@ export function PerformanceSection() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                         <div className="absolute inset-0 flex flex-col justify-end p-5">
-                          <p className="text-xs uppercase tracking-widest text-[var(--gold)]">
+                          <p className="text-xs uppercase tracking-widest text-[var(--accent)]">
                             {item.subtitle}
                           </p>
                           <p className="mt-1 font-display text-xl text-white">

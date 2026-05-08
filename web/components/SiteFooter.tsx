@@ -9,7 +9,7 @@ export function SiteFooter() {
     <footer className="border-t border-white/[0.06] py-12">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 sm:flex-row sm:items-center sm:justify-between sm:px-8">
         <div>
-          <p className="font-display text-lg text-[var(--gold)]">{brand.name}</p>
+          <p className="font-display text-lg text-[var(--accent)]">{brand.name}</p>
           <p className="mt-1 text-sm text-[var(--muted)]">
             © {year} · Close-up magic &amp; original creations
           </p>

@@ -16,7 +16,7 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 sm:h-[4.25rem] sm:px-8">
         <Link
           href="#top"
-          className="font-display shrink-0 text-base tracking-wide text-[var(--gold)] transition hover:text-[var(--gold-bright)] sm:text-lg"
+          className="font-display shrink-0 text-base tracking-wide text-[var(--accent)] transition hover:text-[var(--accent-hover)] sm:text-lg"
         >
           Abdelali Nour
         </Link>

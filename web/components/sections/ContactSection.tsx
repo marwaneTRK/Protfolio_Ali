@@ -48,7 +48,7 @@ function ContactInner() {
           className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:items-start"
         >
           <motion.div variants={fadeUp}>
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--gold)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--accent)]">
               Booking
             </p>
             <h2 className="mt-4 font-display text-4xl font-light tracking-tight text-white sm:text-5xl">
@@ -84,7 +84,7 @@ function ContactInner() {
                     name="name"
                     required
                     autoComplete="name"
-                    className="mt-2 w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none ring-0 transition placeholder:text-white/25 focus:border-[var(--gold)]/50 focus:ring-2 focus:ring-[var(--gold)]/20"
+                    className="mt-2 w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none ring-0 transition placeholder:text-white/25 focus:border-[var(--accent)]/50 focus:ring-2 focus:ring-[var(--accent)]/20"
                     placeholder="Your name"
                   />
                 </label>
@@ -97,7 +97,7 @@ function ContactInner() {
                     type="email"
                     required
                     autoComplete="email"
-                    className="mt-2 w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none transition placeholder:text-white/25 focus:border-[var(--gold)]/50 focus:ring-2 focus:ring-[var(--gold)]/20"
+                    className="mt-2 w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none transition placeholder:text-white/25 focus:border-[var(--accent)]/50 focus:ring-2 focus:ring-[var(--accent)]/20"
                     placeholder="you@example.com"
                   />
                 </label>
@@ -109,7 +109,7 @@ function ContactInner() {
                     name="phone"
                     type="tel"
                     autoComplete="tel"
-                    className="mt-2 w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none transition placeholder:text-white/25 focus:border-[var(--gold)]/50 focus:ring-2 focus:ring-[var(--gold)]/20"
+                    className="mt-2 w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none transition placeholder:text-white/25 focus:border-[var(--accent)]/50 focus:ring-2 focus:ring-[var(--accent)]/20"
                     placeholder="+212 …"
                   />
                 </label>
@@ -121,7 +121,7 @@ function ContactInner() {
                     ref={interestRef}
                     name="interest"
                     defaultValue=""
-                    className="mt-2 w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none transition focus:border-[var(--gold)]/50 focus:ring-2 focus:ring-[var(--gold)]/20"
+                    className="mt-2 w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none transition focus:border-[var(--accent)]/50 focus:ring-2 focus:ring-[var(--accent)]/20"
                   >
                     {interestOptions.map((o) => (
                       <option key={o.value || "default"} value={o.value}>
@@ -138,7 +138,7 @@ function ContactInner() {
                     name="message"
                     required
                     rows={5}
-                    className="mt-2 w-full resize-y rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none transition placeholder:text-white/25 focus:border-[var(--gold)]/50 focus:ring-2 focus:ring-[var(--gold)]/20"
+                    className="mt-2 w-full resize-y rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none transition placeholder:text-white/25 focus:border-[var(--accent)]/50 focus:ring-2 focus:ring-[var(--accent)]/20"
                     placeholder="Date, city, type of event, audience size…"
                   />
                 </label>
@@ -148,7 +148,7 @@ function ContactInner() {
                 <button
                   type="submit"
                   disabled={pending}
-                  className="inline-flex h-12 min-w-[200px] items-center justify-center gap-2 rounded-full bg-[var(--gold)] px-8 text-sm font-semibold tracking-wide text-black transition hover:bg-[var(--gold-bright)] disabled:cursor-not-allowed disabled:opacity-60"
+                  className="inline-flex h-12 min-w-[200px] items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-8 text-sm font-semibold tracking-wide text-white transition hover:bg-[var(--accent-hover)] hover:text-black disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   {pending ? (
                     <>

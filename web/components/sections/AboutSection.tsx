@@ -21,7 +21,7 @@ export function AboutSection() {
           viewport={{ once: true, margin: "-80px" }}
         >
           <motion.div variants={fadeUp}>
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--gold)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--accent)]">
               About
             </p>
             <h2 className="mt-4 font-display text-4xl font-light tracking-tight text-white sm:text-5xl">
